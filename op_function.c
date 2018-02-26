@@ -4,6 +4,16 @@
 #include <unistd.h>
 #define STDOUT 1
 /**
+ */
+int print_in(va_list args)
+{
+	int in, ret_val;
+
+	in = va_arg(args, int);
+	ret_val = _itoa(in);
+	return (ret_val);
+}
+/**
  * print_ch - print char
  *@args: char to be printed.
  */

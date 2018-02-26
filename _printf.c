@@ -14,6 +14,7 @@ int _printf(const char *format, ...)
 	op_t arg_format[] = {
 		{"c", print_ch},
 		{"s", print_st},
+		{"i", print_in},
 		{NULL, NULL}
 	};
 	int temp;
@@ -46,7 +47,7 @@ int _printf(const char *format, ...)
 		}
 		j++;
 	}
-	_putchar('\n');
+	/*_putchar('\n');*/
 	va_end(args);
 	return (char_count);
 }
