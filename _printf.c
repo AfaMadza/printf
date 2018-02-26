@@ -3,6 +3,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
+/**
+ * _printf - produces output according to a specified format.
+ * @format: format specified by user.
+ * Return: None.
+ */
 int _printf(const char *format, ...)
 {
 	va_list args;
@@ -24,12 +29,9 @@ int _printf(const char *format, ...)
 			while (arg_format[i].op != NULL)
 			{
 				if (format[j] == '%')
-				{
 					format++;
-				}
 				if (format[j] == *arg_format[i].op)
 				{
-
 					temp = arg_format[i].f(args);
 					char_count += temp;
 				}
