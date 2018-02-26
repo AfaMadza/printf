@@ -6,6 +6,7 @@
 /**
  * count_digit - counts the number of digits in an int.
  *@n: int passed to function.
+ *Return: length.
  */
 int count_digit(int n)
 {
@@ -21,6 +22,7 @@ int count_digit(int n)
 /**
  * _itoa - converts and integer to ASCII character.
  *@n: integer to be converted.
+ *Return: length.
  */
 int _itoa(int n)
 {

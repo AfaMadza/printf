@@ -28,7 +28,7 @@ int print_ch(va_list args)
 
 	ch = va_arg(args, int);
 	write(STDOUT, &ch, len);
-	return(len);
+	return (len);
 }
 /**
  * print_st - print string.
@@ -43,7 +43,7 @@ int print_st(va_list args)
 	s = va_arg(args, char *);
 	if (s == NULL)
 	{
-		return(-1);
+		return (-1);
 	}
 	len = _strlen(s);
 	write(STDOUT, s, len);
@@ -52,14 +52,14 @@ int print_st(va_list args)
 }
 /**
  * print_di - prints a digit.
- * @n: digit to be printed.
+ * @args: digit to be printed.
  * Return: number of characters printed.
  */
 int print_di(va_list args)
 {
 	int in, ret_val;
 
-        in = va_arg(args, int);
-        ret_val = _itoa(in);
-        return (ret_val);
+	in = va_arg(args, int);
+	ret_val = _itoa(in);
+	return (ret_val);
 }
