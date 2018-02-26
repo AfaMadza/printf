@@ -6,7 +6,7 @@
 /**
  * _printf - produces output according to a specified format.
  * @format: format specified by user.
- * Return: None.
+ * Return: number of characters printed.
  */
 int _printf(const char *format, ...)
 {
@@ -15,6 +15,7 @@ int _printf(const char *format, ...)
 		{"c", print_ch},
 		{"s", print_st},
 		{"i", print_in},
+		{"d", print_di},
 		{NULL, NULL}
 	};
 	int temp;
@@ -47,7 +48,6 @@ int _printf(const char *format, ...)
 		}
 		j++;
 	}
-	/*_putchar('\n');*/
 	va_end(args);
 	return (char_count);
 }

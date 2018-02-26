@@ -1,7 +1,7 @@
-.TH man 2 "26 Jan 2018" "0.01" "_printf"
+.TH man 3 "26 Jan 2018" "0.01" "_printf"
 .SH NAME
 .B _printf
-- prosuces output according to a specified format.
+- produces output according to a specified format.
 .SH SYNOPSIS
 _printf
 .I FORMAT

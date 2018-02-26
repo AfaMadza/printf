@@ -4,6 +4,9 @@
 #include <unistd.h>
 #define STDOUT 1
 /**
+ * print_in - prints an int to STDOUT.
+ *@args: argument to be printed.
+ *Return: length.
  */
 int print_in(va_list args)
 {
@@ -16,6 +19,7 @@ int print_in(va_list args)
 /**
  * print_ch - print char
  *@args: char to be printed.
+ *Return: length.
  */
 int print_ch(va_list args)
 {
@@ -29,6 +33,7 @@ int print_ch(va_list args)
 /**
  * print_st - print string.
  *@args: string to be printed.
+ *Return: length;
  */
 int print_st(va_list args)
 {
@@ -46,27 +51,15 @@ int print_st(va_list args)
 
 }
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * print_di - prints a digit.
+ * @n: digit to be printed.
+ * Return: number of characters printed.
  */
-int _putchar(char c)
+int print_di(va_list args)
 {
-	return (write(1, &c, 1));
-}
-/**
- * _strlen - returns length of a string
- * @s: pointer to string whose length will be returned
- * Return: None
- */
-int _strlen(char *s)
-{
-	int length = 0;
+	int in, ret_val;
 
-	for (; *s != '\0'; s++)
-	{
-		length++;
-	}
-	return (length);
+        in = va_arg(args, int);
+        ret_val = _itoa(in);
+        return (ret_val);
 }
