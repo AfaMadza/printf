@@ -10,7 +10,7 @@
 int main(void)
 {
 	_printf("This prints a string.");
-	_printf("%s", "This prints a specified string.");
-	_printf("%c", "Z");
+	_printf("I have %s and %s", "string1", "string2");
+	_printf("%c", 'Z');
 	return (0);
 }

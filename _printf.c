@@ -11,8 +11,10 @@ int _printf(const char *format, ...)
 		{"s", print_st},
 		{NULL, NULL}
 	};
+	int temp;
 	int i = 0;
 	int j = 0;
+	int char_count = 0;
 
 	va_start(args, format);
 	while (format != NULL && format[j] != '\0')
@@ -27,7 +29,9 @@ int _printf(const char *format, ...)
 				}
 				if (format[j] == *arg_format[i].op)
 				{
-					arg_format[i].f(args);
+
+					temp = arg_format[i].f(args);
+					char_count += temp;
 				}
 				i++;
 			}
@@ -36,10 +40,11 @@ int _printf(const char *format, ...)
 		else
 		{
 			_putchar(format[j]);
+			char_count++;
 		}
 		j++;
 	}
 	_putchar('\n');
 	va_end(args);
-	return (0);
+	return (char_count);
 }
