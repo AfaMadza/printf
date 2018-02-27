@@ -35,7 +35,7 @@ int _itoa(int n)
 	if (n == 0)
 	{
 		write(STDOUT, &o, 1);
-		return(1);
+		return (1);
 	}
 	else if (n < 0)
 		digit_count++;

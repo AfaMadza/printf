@@ -32,18 +32,25 @@ int _printf(const char *format, ...)
 		}
 		else if (format[j] == '%')
 		{
-			while (arg_format[i].op != NULL)
+			format++;
+			if (format[j] == ' ')
 			{
-				if (format[j] == '%')
-					format++;
-				if (format[j] == *arg_format[i].op)
-				{
-					temp = arg_format[i].f(args);
-					char_count += temp;
-				}
-				i++;
+				while (format[j] == ' ')
+					j++;
 			}
-			i = 0;
+			else
+			{
+				while (arg_format[i].op != NULL)
+				{
+					if (format[j] == *arg_format[i].op)
+					{
+						temp = arg_format[i].f(args);
+						char_count += temp;
+					}
+					i++;
+				}
+				i = 0;
+			}
 		}
 		else
 		{
