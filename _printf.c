@@ -21,7 +21,9 @@ int _printf(const char *format, ...)
 	int temp; int i = 0; int j = 0; int char_count = 0;
 
 	va_start(args, format);
-	while (format != NULL && format[j] != '\0')
+	if (format == NULL)
+		return (-1);
+	while (format[j] != '\0')
 	{
 		if (format[j] == '%' && format[j + 1] == '%')
 		{	_putchar(format[j]);
@@ -32,7 +34,7 @@ int _printf(const char *format, ...)
 		{
 			while (arg_format[i].op != NULL)
 			{
-				if(format[j] == '%')
+				if (format[j] == '%')
 					format++;
 				if (format[j] == *arg_format[i].op)
 				{

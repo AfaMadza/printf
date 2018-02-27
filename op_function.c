@@ -11,7 +11,7 @@
  */
 int print_in(va_list args)
 {
-	int in, ret_val;
+	unsigned int in, ret_val;
 
 	in = va_arg(args, int);
 	ret_val = _itoa(in);
