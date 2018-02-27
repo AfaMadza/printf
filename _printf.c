@@ -33,9 +33,9 @@ int _printf(const char *format, ...)
 		else if (format[j] == '%')
 		{
 			j++;
-			while(format[j] == ' ')
+			while (format[j] == ' ')
 			{
-					j++;
+				j++;
 			}
 			if (format[j] == '%')
 			{
