@@ -2,6 +2,7 @@
 #include "holberton.h"
 #include <stdlib.h>
 #include <unistd.h>
+#include <stdio.h>
 #define STDOUT 1
 /**
  * print_in - prints an int to STDOUT.
@@ -40,12 +41,17 @@ int print_st(va_list args)
 	char *s;
 	int len;
 
+	if (args == NULL)
+		return (0);
+	printf("Passed args\n");
 	s = va_arg(args, char *);
 	if (s == NULL)
 	{
-		return (-1);
+		printf("Inside NULL check\n");
+		return (0);
 	}
 	len = _strlen(s);
+	printf("Before write\n");
 	write(STDOUT, s, len);
 	return (len);
 

@@ -26,11 +26,16 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 	while (format != NULL && format[j] != '\0')
 	{
-		if (format[j] == '%')
+		if (format[j] == '%' && format[j + 1] == '%')
+		{	_putchar(format[j]);
+			j++;
+			char_count++;
+		}
+		else if (format[j] == '%')
 		{
 			while (arg_format[i].op != NULL)
 			{
-				if (format[j] == '%')
+				if(format[j] == '%')
 					format++;
 				if (format[j] == *arg_format[i].op)
 				{
