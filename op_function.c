@@ -39,19 +39,18 @@ int print_ch(va_list args)
 int print_st(va_list args)
 {
 	char *s;
+	char *null = "(null)";
 	int len;
 
 	if (args == NULL)
 		return (0);
-	printf("Passed args\n");
 	s = va_arg(args, char *);
 	if (s == NULL)
 	{
-		printf("Inside NULL check\n");
-		return (0);
+		write(STDOUT, null, 6);
+		return (6);
 	}
 	len = _strlen(s);
-	printf("Before write\n");
 	write(STDOUT, s, len);
 	return (len);
 

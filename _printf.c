@@ -18,10 +18,7 @@ int _printf(const char *format, ...)
 		{"d", print_di},
 		{NULL, NULL}
 	};
-	int temp;
-	int i = 0;
-	int j = 0;
-	int char_count = 0;
+	int temp; int i = 0; int j = 0; int char_count = 0;
 
 	va_start(args, format);
 	while (format != NULL && format[j] != '\0')
