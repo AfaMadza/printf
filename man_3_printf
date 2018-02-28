@@ -11,6 +11,19 @@ _printf
 .SH DESCRIPTION
 Print ARGUMENT(s) according to FORMAT.
 FORMAT controls the output.
+
+.B These are different identifiers:
+
+%c This will print a single character.
+
+%s This will print a string.
+
+%i This will print an integer.
+
+%d This will print a digit.
+
+%% This will print a single percent sign.
+
 .SH OPTIONS
 .B _printf
 does not take any options yet.
