@@ -12,7 +12,7 @@ _printf
 Print ARGUMENT(s) according to FORMAT.
 FORMAT controls the output.
 
-.B Interpreted sequences are:
+.B These are different identifiers:
 
 %c This will print a single character.
 
