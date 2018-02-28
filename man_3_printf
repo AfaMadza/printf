@@ -12,17 +12,26 @@ _printf
 Print ARGUMENT(s) according to FORMAT.
 FORMAT controls the output.
 
-.B These are different identifiers:
+The following are different specifiers used to modify format:
 
-%c This will print a single character.
+%c This format specifier will print a single character.
 
-%s This will print a string.
+%s This format specifier will print a string.
 
-%i This will print an integer.
+%i This format specifier will print an integer.
 
-%d This will print a digit.
+%d This format specifier will print an digit.
 
-%% This will print a single percent sign.
+%% This format specifier will print a single percent sign.
+
+.B NOTE: #include \'\'holberton.h\'\'
+
+.SH EXAMPLE
+Function Call: _printf("%s\n", "Hello World!");
+Output: Hello World!
+
+Funtion Call: _printf("%d\n", 63736);
+Output: 63736
 
 .SH OPTIONS
 .B _printf
@@ -30,6 +39,6 @@ does not take any options yet.
 .SH SEE ALSO
 .I peerlearning(2), projectbased(2), fullstack(2), Betty(1)
 .SH BUGS
-No known bugs.
+Function does not yet accomodate flags, custom width specifiers or precision. Function will also not print a single '%' without a specifier immediatley following it.
 .SH AUTHOR
 Afa Madza and John Dinh, with assistance from members of Holberton School Cohort 5.
